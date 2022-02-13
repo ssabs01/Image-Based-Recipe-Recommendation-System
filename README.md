@@ -23,7 +23,7 @@ cleaned.
 
 ## Dataset Visualization
                                    Fig 1. Dataset Visualization 
-<div align="center"><img src="Images/architecture.png" height='300px'/></div>
+<div align="center"><img src="Images/Dataset.png" height='300px'/></div>
 
 The aim of this project is to recommend recipes based on a query image of a dish that is provided as an input. This project involves following modules:
 1. **Data Preprocessing** :  All the images in the food image database and the query image is reshaped to the size 224*169*3. 
@@ -50,7 +50,7 @@ The aim of this project is to recommend recipes based on a query image of a dish
 <div align="center"><img src="Images/Home_Page.png" height='300px'/></div>
 
                                    Fig 6. Query Results
-<div align="center"><img src="Images/Query_results.png" height='300px'/></div>
+<div align="center"><img src="Images/Query_Results.png" height='300px'/></div>
 
 ## Project Team Members
  
