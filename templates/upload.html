@@ -1,0 +1,142 @@
+<!doctype html>
+<head>
+<style>
+	.container {
+    	text-align: center; /* center the child */
+		padding:10px;
+	}
+	h1 {
+		display: inline-flex; /* keep the background color wrapped tight */
+		/* background-color:green; */
+		color:#000080;
+		font-weight: 600;
+		text-transform: capitalize;
+		font-size: 60px;
+		font-family: Garamond, serif;
+		margin-bottom: 10px;
+		
+	}
+	h2{
+	font-family: Garamond, serif;
+	color:#000080;
+	}
+	body {
+		font-family: 'Open Sans',sans-serif;
+		background-image: url('display/z_background.jpg');
+		background-attachment: fixed;
+  		background-size: cover;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		left: 0;
+		top:0px; bottom: 0px;
+		background-repeat: repeat;
+		overflow-x: scroll;
+	}
+	.post-btn, #submit{
+	    /* background: transparent; */
+		background-color:rgba(0, 0, 128, 0.65);
+    	padding: 10px 25px;
+		color: #ffffff!important;
+		font-weight: bold;
+		display: inline-block;
+		border-radius: 0;
+		border: 2px solid #000080;
+    	border-radius: 50px;
+		transition: .4s;
+		outline: 0;		
+		color:#000080;
+	}
+	.btn:hover
+	{
+		background-image:none !important;
+		background-color:#47d45a !important;
+		/* color:rgb(255, 255, 255) */
+	}
+	.choose::-webkit-file-upload-button {
+		/* background: transparent; */
+		background-color:rgba(0, 0, 128, 0.65);
+		padding: 10px 25px;
+		color: #ffffff!important;
+		font-weight: bold;
+		display: inline-block;		
+		border-radius: 0;
+		border: 2px solid #000080;
+		border-radius: 50px;
+		transition: .4s;
+		outline: 0;	
+		white-space: nowrap;
+		cursor: pointer;
+		font-size: 12pt;
+		
+		
+	}
+	img{
+		margin-top: 50px;
+		margin-bottom: 50px;
+		margin-right: 50px;
+		margin-left: 50px;
+	}
+</style>
+</head>
+
+<title>Python Flask File Upload Example</title>
+<div style="border:3px solid #000080; width:800px; margin:0 auto;margin-top:150px;">
+<div class="container">
+	<h1>PIC & EAT</h1>
+	<h2 style="font-size: 30px">Select a Food Image to upload</h2>
+</div>
+<form method="post" action="/" enctype="multipart/form-data">
+    <dl >
+		<p class="container">
+			<input style="color:#000080;font-size:16px;" type="file" name="file" autocomplete="off" required class="choose" >
+		</p>
+
+    </dl>
+	<p class="container">
+		<input type="submit" value="Submit" required class="btn post-btn" style="font-size:16px;">
+	</p>
+</form>
+</div>
+{% if query_filename %}
+<h2 class="container" style=" margin-bottom: 0px;padding:0px;">Input Image</h2>
+<div class="container" >
+	<img style="background-color:#a0daa3;padding:20px; margin-top: 0px; margin-bottom: 0px;" src="{{ '../static/uploads/'+query_filename }}">
+</div>
+{% endif %}
+<!-- <p class="container">
+	{% with messages = get_flashed_messages() %}
+	{% if messages %} -->
+<ul style="text-align:center">
+	{% for message in messages %}
+	<li style="margin-top: 0px;">{{ message }}</li>
+	{% endfor %}
+</ul>
+{% endif %}
+{% endwith %}
+<!-- </p> -->
+{% if filename %}
+<div style="display: flex; margin: 35px; background-color: #a0daa3;">
+	<img style="float:left;" src="{{ url_for('display_image', filename=filename[0]) }}">
+	<p align="justify" style="margin-right:35px; margin-top:43px; line-height:30px;">{{recipe[0]}}
+	</p>
+</div>
+<div style="display: flex; margin: 35px; background-color: #a0daa3;">
+	<img style="float:left;" src="{{ url_for('display_image', filename=filename[1]) }}">
+	<p align="justify" style="margin-right:35px; margin-top:43px; line-height:30px;">{{recipe[1]}}</p>
+</div>
+<div style="display: flex; margin: 35px; background-color: #a0daa3;">
+	<img style="float:left;" src="{{ url_for('display_image', filename=filename[2]) }}">
+	<p align="justify" style="margin-right:35px; margin-top:43px; line-height:30px;" >{{recipe[2]}}</p>
+</div>
+<div style="display: flex; margin: 35px; background-color: #a0daa3;">
+	<img style="float:left;" src="{{ url_for('display_image', filename=filename[3]) }}">
+	<p align="justify" style="margin-right:35px; margin-top:43px; line-height:30px;">{{recipe[3]}}</p>
+</div>
+<div style="display: flex; margin: 35px; background-color: #a0daa3;">
+	<img style="float:left;" src="{{ url_for('display_image', filename=filename[4]) }}">
+	<p align="justify" style="margin-right:35px; margin-top:43px; line-height:30px;">{{recipe[4]}}</p>
+</div>
+
+
+{% endif %}
