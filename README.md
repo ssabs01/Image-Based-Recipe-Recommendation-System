@@ -39,18 +39,18 @@ The aim of this project is to recommend recipes based on a query image of a dish
 
 ## Model Performance
                                    Fig 3. Model Performance 
-<div align="center"><img src="Images/architecture.png" height='300px'/></div>
+<div align="center"><img src="Images/Performance.png" height='300px'/></div>
 
 ## Sample Results
                                    Fig 4. Results
-<div align="center"><img src="Images/architecture.png" height='300px'/></div>
+<div align="center"><img src="Images/Sample_Results.png" height='300px'/></div>
 
 ## Website Glimpse
                                    Fig 5. Home Page
-<div align="center"><img src="Images/architecture.png" height='300px'/></div>
+<div align="center"><img src="Images/Home_Page.png" height='300px'/></div>
 
                                    Fig 6. Query Results
-<div align="center"><img src="Images/architecture.png" height='300px'/></div>
+<div align="center"><img src="Images/Query_results.png" height='300px'/></div>
 
 ## Project Team Members
  
